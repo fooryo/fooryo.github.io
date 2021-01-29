@@ -1,0 +1,17 @@
+CACHE MANIFEST
+
+#commento
+#servono per far triggerare l'update?
+# ""I browser aggiornano  l'application cache solo se il file manifest viene modificato.""
+
+#qua ci vanno le cose da cashare
+CACHE:
+
+#qua ci vanno le cose da far prendere sempre fresche
+NETWORK:
+index.html
+
+
+#cosa mostrare in caso di risorsa non accessibile
+FALLBACK:
+* notfound.html
