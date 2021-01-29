@@ -48,3 +48,4 @@ const ruscellodata = {
 }
 
 export default ruscellodata;
+/*asd*/
