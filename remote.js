@@ -21,9 +21,8 @@ const ruscellodata = {
             "altstr":"Angel",
             "titlestr":"Angel",
             "iconpath":"/res/icons/telly.png",
-            "rendermode":"video",
-            "srcurl":"https://player.angelthump.com/?channel=thevidyanetwork",
-            "rawhtml":"EMPTY"
+            "srcurl":"https://player.angelthump.com/?channel=ruscello",
+            "rawhtml":"<iframe id=\"content\" src=\"res/trailer.mp4\"  controls=\"none\" muted=\"\">ERROR: div#contentFrame -> div#contenitore -> iframe#content</iframe>"
         },
         {   
             "nome":"Vince",
