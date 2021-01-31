@@ -22,8 +22,8 @@ const ruscellodata = {
             "titlestr":"Angel",
             "iconpath":"/res/icons/telly.png",
             "srcurl":"https://player.angelthump.com/?channel=ruscello",
-            "rendermode":"video",
-            "rawhtml":"<iframe id=\"content\" src=\"res/trailer.mp4\"  controls=\"none\" muted=\"\">ERROR: div#contentFrame -> div#contenitore -> iframe#content</iframe>"
+            "rendermode":"raw",
+            "rawhtml":"<div id=\"root\"></div><script type=\"8e1a47f55ae145ea0afa6f24-text/javascript\">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-98637299-1', 'auto');ga('send', 'pageview');</script><script async src=\"https://www.gstatic.com/cv/js/sender/v1/cast_sender.js\" type=\"8e1a47f55ae145ea0afa6f24-text/javascript\"></script><script src=\"main.04290a4ab4b655099b16.js\" type=\"8e1a47f55ae145ea0afa6f24-text/javascript\"></script><script src=\"https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js\" data-cf-settings=\"8e1a47f55ae145ea0afa6f24-|49\" defer=\"\"></script>" 
         },
         {   
             "nome":"Vince",
