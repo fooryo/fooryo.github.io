@@ -22,6 +22,7 @@ const ruscellodata = {
             "titlestr":"Angel",
             "iconpath":"/res/icons/telly.png",
             "srcurl":"https://player.angelthump.com/?channel=ruscello",
+            "rendermode":"video",
             "rawhtml":"<iframe id=\"content\" src=\"res/trailer.mp4\"  controls=\"none\" muted=\"\">ERROR: div#contentFrame -> div#contenitore -> iframe#content</iframe>"
         },
         {   
