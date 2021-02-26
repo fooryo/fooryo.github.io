@@ -187,6 +187,9 @@ img{
 }
 
 @media only screen and (max-aspect-ratio: 11/10){
+    html{
+        height: 100%;
+    }
 
     #gridContainer{
         /* height: 100%; */
