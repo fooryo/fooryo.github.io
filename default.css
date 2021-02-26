@@ -129,6 +129,13 @@ video{
     align-items: center;
 }
 
+.splashscreen{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
 .remoteImgButton{
     background-color: black;
     width: auto;
