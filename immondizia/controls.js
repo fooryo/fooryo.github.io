@@ -21,12 +21,6 @@ function detatchChatFrame(){
     }else{
         extChatWindowHandle.focus();
     }
-
-    //scrivi in var parent =extChatWindowHandle.document.[...] magari uno <script> per comunicare this.window.document per la finestra del video
-    //questo nel caso volessi spostare, con la chat, anche controls e remote. cioè staccare tutta la column.
-    //giustamente il problema che mi ero porso 
-
-    //riorganizzaLayoutSenzaChatFrame();
 }
 
 function reattachChatFrame(){
@@ -44,12 +38,8 @@ function reattachChatFrame(){
     newElem.innerHTML=chatInnerHTML;
 
     chatFrameElement.appendChild(newElem);
-
-
-    //riorganizzaLayoutConChatFrame();       
+      
 }
-
-//SE FACCIO LO SWITCH NELLA FINESTRA PRINCIPALE DEVO MANTENERE UN HANDLE DELLA FINESTRA CON LA CHAT COSÌ DA POTERLA CHIUDERE
 
 
 function commuteChatPopOut(){
@@ -64,9 +54,6 @@ function commuteChatPopOut(){
 }
 
 function receiveExitToParentWindow(test){
-    //console.log("received Exit with test:"+test+"and ");
-    //if(extChatWindowHandle.closed) reattachChatFrame(); //<-- non funziona bene sta cosa. mi ritorna false sempre, poi lo faccio a mano nella console e mi torna true, come se la scrittura della variabile sia async
-    //console.log("extChatWH.closed "+extChatWindowHandle.closed);
     if(test==0) reattachChatFrame(); //alla fine quelle chiamate "spurie" con il '2' erano quelle problematiche
     else{console.log("what the fuck: receiveExitToParentWindow with value "+test+" and closed: "+extChatWindowHandle.closed);}
 
@@ -74,17 +61,6 @@ function receiveExitToParentWindow(test){
 
 document.getElementById('dbgPOP').addEventListener("click",commuteChatPopOut);
 
-
-
-//TODO: faccio una funzione+booleano switch per la questione della chat?
-
-
-
-
-/*
- * not draggable image issue
- * https://stackoverflow.com/questions/26356877/html5-draggable-false-not-working-in-firefox-browser
-*/
 
 
 function dragnull(event){
@@ -96,17 +72,9 @@ let idno = remoteElement.getElementsByClassName('remoteImgButton').length;
 for(var i=0;i<idno;i++) remoteElement.getElementsByClassName('remoteImgButton').item(i).addEventListener("dragstart", dragnull);
 
 
-
-/*  
- *  https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
- *  https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
- *  https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event
-*/
 let columnHidden=false;
 function keyControlHandler(keydownEvent){
-    //keydownEvent.preventDefault(); //SE LASCIO QUESTO NON COMMENTATO MANCO LA CONSOLE CON F12 POSSO APRIRE, FARE ATTENZIONE
     if (keydownEvent.isComposing || keydownEvent.keyCode === 229)  return;
-    //if (keydownEvent.isComposing || keydownEvent.keyCode === 229 || keydownEvent.repeat)  return;
     if (keydownEvent.repeat) return;
 
     switch(keydownEvent.keyCode){
@@ -121,35 +89,17 @@ function keyControlHandler(keydownEvent){
             }
             break;
         case 82: //char rR
-            //potrei usare le variabili CSS sfruttare il fallback mettendo come valore invalid alla variabile
-            // --valore
-            // property: var(--valore, defaultValue)
-            // set(--valore,invalid)
-            //property verrà settato al valore di defaultValue
+
             break;
     }
 }
 
-/*
-let iframes = document.getElementsByTagName('iframe');
-for(i=0;i<iframes.length;i++) iframes.item(i).addEventListener('keydown', keyControlHandler);
-*/
 
 document.addEventListener('keydown', keyControlHandler);
-/*quick n dirty: in caso di video tipo iframe injecta la roba correttamente, in caso di <video> fallisce che tanto è injectata dalla linea di sopra che addEventListener su tutto il documento */
+
 try{
     document.getElementById('content').contentDocument.documentElement.getElementsByTagName('body').item(0).addEventListener('keydown', keyControlHandler);
 //document.getElementById('chatFrame').getElementsByTagName('iframe').item(0).
 }catch(exception){
     console.log("catched:"+exception);
 }
-
-/*
-document.getElementById('content').contentDocument.documentElement.getElementsByTagName('body').item(0).addEventListener('keydown', keyControlHandler);
-*/
-
-/*
- * https://developer.mozilla.org/en-US/docs/Web/API/Window/open
- * 
- * 
-*/

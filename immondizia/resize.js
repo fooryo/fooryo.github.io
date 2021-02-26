@@ -79,8 +79,7 @@ function startDragging(mousedownE) {
         //let absNewWidth = vpw-pointerX;
         let relNewWidth = ((vpw-pointerX)/vpw)*100;
         
-        // getColumnElement().style.setProperty("--column-width",relNewWidth.toString(10)+"vw"); //old one, quando basato su flexxboxes
-        document.documentElement.style.setProperty("--column-width",relNewWidth.toString(10)+"vw");
+        getColumnElement().style.setProperty("--column-width",relNewWidth.toString(10)+"vw");
     };
     
     document.body.style.setProperty("cursor","ew-resize");
