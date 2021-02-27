@@ -1,8 +1,8 @@
 
 :root{
     --column-width:20vw;
-    --column-min-width:20px;
-    --column-max-width:100vw;
+    /*--column-min-width:20px;*/
+    /*--column-max-width:100vw;*/
     --iframe-content-height: 56.25vw;
 
 
@@ -48,10 +48,10 @@ iframe{
 #gridContainer{
     height: 100%;
     width: 100%;
-    display:grid; /* | inline-grid */
+    display:grid;
 
-    grid-template-columns: var(--widescreen-cols-config);      /*auto var(--handler-width) var(--column-width);*/
-    grid-template-rows: var(--widescreen-rows-config);/*4vh auto 4vh;*/
+    grid-template-columns:  var(--widescreen-cols-config);      /*auto var(--handler-width) var(--column-width);*/
+    grid-template-rows:     var(--widescreen-rows-config);      /*4vh auto 4vh;*/
 
     
     grid-template-areas: 
