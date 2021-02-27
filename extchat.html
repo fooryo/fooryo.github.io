@@ -1,0 +1,90 @@
+<!--
+https://stackoverflow.com/questions/8318264/how-to-move-an-iframe-in-the-dom-without-losing-its-state
+https://stackoverflow.com/questions/30964292/move-iframe-dom-to-new-window
+https://paul.kinlan.me/creating-a-popout-iframe-with-adoptnode-and-magic-iframes/
+https://medium.com/@jakob/change-an-iframe-parent-without-reload-3563d79d50a9
+
+TLDR: non è possibile spostare un iframe nel DOM o altra finestra senza reloadarlo. Period.
+-->
+
+<!DOCTYPE html>
+
+<head>
+
+<title>Chiacchiere poppate via</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ruscellatore">
+<meta name="author" content="Fooryo">
+<meta name="robots" content="noindex, nofollow">
+
+
+<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+
+<style>
+
+    *{
+        border: 0px;
+        margin: 0px;
+        padding: 0px; 
+    }
+
+    body{
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #extChatFrame{
+        width: 100%;
+        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+</style>
+
+<script type="text/javascript">
+    var testvarchild="777 su ogni cosa"
+    var parentWindow=null;
+
+    function communicateExitToParentWindow(a){
+        console.log("inside child window handler function. number: "+a);
+        //parentWindow.commuteChatPopOut();
+        window.opener.receiveExitToParentWindow(a);
+        console.log("called parentWindow.commuteChatPopOut");
+    }
+
+    console.log("initialized window, my parent is:"+parentWindow);
+
+    window.addEventListener("beforeunload", ()=>{communicateExitToParentWindow(0);});
+    
+
+    console.log("added listener");
+
+    //window.onbeforeunload=communicateExitToParentWindow(2); //<- questa riga l'ho letta da qualche parte su stackoverflow... 
+    //... e praticamente mi trigghera la funzione al loading, la commento perchè non la voglio cancellare, effettivamente... 
+    //... manda il 2 nella finestra parent
+
+
+</script>
+
+</head>
+
+<body>
+    <div id="extChatFrame">
+        <script class="chatte" id="cid0020000265869400948" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">
+        {"handle":"fooryoembed","arch":"js","styles":
+            {"a":"000000","b":100,"c":"c0c0c0","d":"a0a0a0","e":"000000","g":"e0e0e0",
+            "h":"606060","j":"ffffff","k":"336666","l":"404040","m":"000000",
+            "n":"FFFFFF","p":"10","q":"000000","r":100,"usricon":0,"allowpm":0,"cnrs":"0.38"
+            }
+        }
+        </script>
+    </div>
+</body>

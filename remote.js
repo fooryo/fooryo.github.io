@@ -7,7 +7,7 @@
 
 const ruscellodata = {
     "canali":[
-        {   
+        {   //trailer.mp4
             "nome":"TestTrailer",
             "altstr":"TestTrailer",
             "titlestr":"TestTrailer",
@@ -16,7 +16,7 @@ const ruscellodata = {
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },
-        {   
+        {   //ruscello angelthump iframe
             "nome":"RuscelloCinema_iframe",
             "altstr":"RuscelloCinema_iframe",
             "titlestr":"RuscelloCinema_iframe",
@@ -25,7 +25,7 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         },
-        {   
+        {   //ruscello angelthump rawhtml
             "nome":"RuscelloCinema_rawhtml",
             "altstr":"RuscelloCinema_rawhtml",
             "titlestr":"RuscelloCinema_rawhtml",
@@ -34,7 +34,7 @@ const ruscellodata = {
             "rendermode":"rawhtml",
             "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=ruscello\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
         },
-        {   
+        {   //WindowsMovieHouse AngelThump VIDEO
             "nome":"AngelThump_video",
             "altstr":"AngelThump_video",
             "titlestr":"AngelThump_video",
@@ -43,7 +43,7 @@ const ruscellodata = {
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         },
-        {   
+        {   //WindowsMovieHouse AngelThump iframe
             "nome":"AngelThump_iframe",
             "altstr":"AngelThump_iframe",
             "titlestr":"AngelThump_iframe",
@@ -52,7 +52,7 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         },
-        {   
+        {   //WindowsMovieHouse AngelThump rawhtml
             "nome":"AngelThump_rawhtml",
             "altstr":"AngelThump_rawhtml",
             "titlestr":"AngelThump_rawhtml",
@@ -89,11 +89,11 @@ const ruscellodata = {
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"        
         },
         {   
-            "nome":"deepfulVideo",
-            "altstr":"deepfulVideo",
-            "titlestr":"deepfulVideo",
-            "iconpath":"/res/icons/ufo_40.png",
-            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/deepandsoulful.mp4?token=public&con=1606125864088",
+            "nome":"Picarco Playloud Live video",
+            "altstr":"Picarco Playloud Live video",
+            "titlestr":"Picarco Playloud Live video",
+            "iconpath":"/res/icons/ufo_40.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
+            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/playloudlive.mp4?token=public&con=1614418313658",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },

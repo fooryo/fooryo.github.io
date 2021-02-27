@@ -9,6 +9,15 @@
     --chat-min-width: 0px;
     --handler-width: 4px;
 
+    --default-widescreen-cols-config: auto var(--handler-width) var(--column-width);
+    --default-widescreen-rows-config: 4vh auto 4vh;
+
+    --default-narrowscreen-cols-config: 100vw;
+    --default-narrowscreen-rows-config: 56.25vw 4vh auto 4vh;
+
+    --widescreen-cols-config: auto var(--handler-width) var(--column-width);
+    --widescreen-rows-config: 4vh auto 4vh;
+
 }
 
 *{ /* '*' stands for qualsiasi elemento */
@@ -41,8 +50,8 @@ iframe{
     width: 100%;
     display:grid; /* | inline-grid */
 
-    grid-template-columns: auto var(--handler-width) var(--column-width);
-    grid-template-rows: 4vh auto 4vh;
+    grid-template-columns: var(--widescreen-cols-config);      /*auto var(--handler-width) var(--column-width);*/
+    grid-template-rows: var(--widescreen-rows-config);/*4vh auto 4vh;*/
 
     
     grid-template-areas: 
@@ -195,11 +204,11 @@ img{
 
 @media only screen and (max-aspect-ratio: 11/10){
     html{
-        height: 100%;
+        height: 100%; /*fixes urlbar viewport probelm in chrome android*/
     }
 
     body{
-        height: 100%;
+        height: 100%; /*fixes urlbar viewport probelm in chrome android*/
     }
 
 
