@@ -104,7 +104,7 @@ const ruscellodata = {
             "altstr":"Rai1",
             "titlestr":"Rai1",
             "iconpath":"/res/icons/rai1.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
-            "srcurl":"https://www.raiplay.it/dirette/rai1",
+            "srcurl":"https://www.raiplay.it/dirette/",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },
@@ -310,11 +310,14 @@ function createVideoIframeNode(chid){
     let videoiframe = document.createElement('iframe');
     videoiframe.setAttribute("id","content");
     videoiframe.setAttribute("src",ruscellodata.canali[chid].srcurl);
-    videoiframe.setAttribute("webkitallowfullscreen","");
-    videoiframe.setAttribute("allowfullscreen","true");
-    videoiframe.setAttribute("frameborder","no");
+    //videoiframe.setAttribute("webkitallowfullscreen","");
+    //videoiframe.setAttribute("allowfullscreen","true");
+    //videoiframe.setAttribute("frameborder","no");
+    //videoiframe.frameBorder="no";
+    //videoiframe.referrerPolicy="origin";
+    //videoiframe.sandbox="allow-forms allow-modals allow-orientation-lock allow-scripts allow-top-navigation";
     try{
-        videoiframe.addEventListener('keydown', keyControlHandler);//TODO : test : non funziona su angelthump che ha delle tipo protezioni
+        //videoiframe.addEventListener('keydown', keyControlHandler);//TODO : test : non funziona su angelthump che ha delle tipo protezioni
     }catch(exception){
         console.log("tryed to addEventListener on videoiframe in createVieoIframeNode");
     }
