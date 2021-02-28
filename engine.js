@@ -174,7 +174,7 @@ function receiveExitToParentWindow(test){
     //console.log("received Exit with test:"+test+"and ");
     //if(extChatWindowHandle.closed) reattachChatFrame(); //<-- non funziona bene sta cosa. mi ritorna false sempre, poi lo faccio a mano nella console e mi torna true, come se la scrittura della variabile sia async
     //console.log("extChatWH.closed "+extChatWindowHandle.closed);
-    if(test==0) reattachChatFrame(); //alla fine quelle chiamate "spurie" con il '2' erano quelle problematiche
+    if(test==0) commuteChatPopOut()//reattachChatFrame(); //alla fine quelle chiamate "spurie" con il '2' erano quelle problematiche
     else{console.log("what the fuck: receiveExitToParentWindow with value "+test+" and closed: "+extChatWindowHandle.closed);}
 }
 
@@ -196,7 +196,7 @@ function keyControlHandler(keydownEvent){
     //keydownEvent.preventDefault(); //SE LASCIO QUESTO NON COMMENTATO MANCO LA CONSOLE CON F12 POSSO APRIRE, FARE ATTENZIONE
     if (keydownEvent.isComposing || keydownEvent.keyCode === 229)  return;
     //if (keydownEvent.isComposing || keydownEvent.keyCode === 229 || keydownEvent.repeat)  return;
-    if (keydownEvent.repeat) return;
+    if (keydownEvent.repeat) return; //andare a vedere il perchè di questo che non me lo ricordo //https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat
 
     switch(keydownEvent.keyCode){
         case 72: //char Hh
