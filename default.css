@@ -266,8 +266,9 @@ img{
         height: 100%; /*fixes urlbar viewport probelm in chrome android*/
     }
 
-    #showChatButton{
-        display: none;
+
+    #showChatButton, #ctrlPop, #ctrlHide{
+        display:none;
         z-index: -2;
     }
 
