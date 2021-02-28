@@ -1,14 +1,14 @@
 const ruscellodata = {
     "canali":[
-        {   //trailer.mp4
-            "nome":"TestTrailer",
-            "altstr":"TestTrailer",
-            "titlestr":"TestTrailer",
-            "iconpath":"/res/icons/balloon.png",
-            "srcurl":"trailer.mp4",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
+        //{   //trailer.mp4
+        //    "nome":"TestTrailer",
+        //    "altstr":"TestTrailer",
+        //    "titlestr":"TestTrailer",
+        //    "iconpath":"/res/icons/balloon.png",
+        //    "srcurl":"trailer.mp4",
+        //    "rendermode":"video",
+        //    "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        //},
         {   //ruscello angelthump iframe
             "nome":"RuscelloCinema_iframe",
             "altstr":"RuscelloCinema_iframe",
@@ -18,24 +18,24 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         },
-        {   //ruscello angelthump rawhtml
-            "nome":"RuscelloCinema_rawhtml",
-            "altstr":"RuscelloCinema_rawhtml",
-            "titlestr":"RuscelloCinema_rawhtml",
-            "iconpath":"/res/icons/pirate_isaac.png",
-            "srcurl":"https://player.angelthump.com/?channel=ruscello",
-            "rendermode":"rawhtml",
-            "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=ruscello\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
-        },
-        {   //WindowsMovieHouse AngelThump VIDEO
-            "nome":"AngelThump_video",
-            "altstr":"AngelThump_video",
-            "titlestr":"AngelThump_video",
-            "iconpath":"/res/icons/angel.png",
-            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
-        },
+        //{   //ruscello angelthump rawhtml
+        //    "nome":"RuscelloCinema_rawhtml",
+        //    "altstr":"RuscelloCinema_rawhtml",
+        //    "titlestr":"RuscelloCinema_rawhtml",
+        //    "iconpath":"/res/icons/pirate_isaac.png",
+        //    "srcurl":"https://player.angelthump.com/?channel=ruscello",
+        //    "rendermode":"rawhtml",
+        //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=ruscello\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
+        //},
+        //{   //WindowsMovieHouse AngelThump VIDEO
+        //    "nome":"AngelThump_video",
+        //    "altstr":"AngelThump_video",
+        //    "titlestr":"AngelThump_video",
+        //    "iconpath":"/res/icons/angel.png",
+        //    "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+        //    "rendermode":"video",
+        //    "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
+        //},
         {   //WindowsMovieHouse AngelThump iframe
             "nome":"AngelThump_iframe",
             "altstr":"AngelThump_iframe",
@@ -45,15 +45,15 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         },
-        {   //WindowsMovieHouse AngelThump rawhtml
-            "nome":"AngelThump_rawhtml",
-            "altstr":"AngelThump_rawhtml",
-            "titlestr":"AngelThump_rawhtml",
-            "iconpath":"/res/icons/pirate_isaac.png",
-            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
-            "rendermode":"rawhtml",
-            "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
-        },
+        //{   //WindowsMovieHouse AngelThump rawhtml
+        //    "nome":"AngelThump_rawhtml",
+        //    "altstr":"AngelThump_rawhtml",
+        //    "titlestr":"AngelThump_rawhtml",
+        //    "iconpath":"/res/icons/pirate_isaac.png",
+        //    "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+        //    "rendermode":"rawhtml",
+        //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
+        //},
         {   
             "nome":"PicartoCanaleInbannabile",
             "altstr":"Rai1",
@@ -98,7 +98,16 @@ const ruscellodata = {
             "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/deepandsoulful.mp4?token=public&con=1606125864088",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
+        },
+        {   
+            "nome":"Rai1",
+            "altstr":"Rai1",
+            "titlestr":"Rai1",
+            "iconpath":"/res/icons/rai1.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
+            "srcurl":"https://www.raiplay.it/dirette/rai1",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
     ]
 }
 
@@ -210,21 +219,22 @@ function keyControlHandler(keydownEvent){
 
     switch(keydownEvent.keyCode){
         case 72: //char Hh
-            if(!columnHidden){
-                //document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
-                //document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
-                //columnHidden=true;
-                hideColumn();
-            }else{
-                //document.documentElement.style.setProperty("--widescreen-cols-config",
-                //    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
-                //document.documentElement.style.setProperty("--widescreen-rows-config",
-                //    document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
-                //columnHidden=false;
-                showColumn();
-
-                //TODO: mostrare fading popup che dice "per tornare premi H"
-            }
+        commuteColumnHide();
+            //if(!columnHidden){
+            //    //document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
+            //    //document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
+            //    //columnHidden=true;
+            //    hideColumn();
+            //}else{
+            //    //document.documentElement.style.setProperty("--widescreen-cols-config",
+            //    //    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
+            //    //document.documentElement.style.setProperty("--widescreen-rows-config",
+            //    //    document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
+            //    //columnHidden=false;
+            //    showColumn();
+//
+            //    //TODO: mostrare fading popup che dice "per tornare premi H"
+            //}
             break;
         case 82: //char rR
             //potrei usare le variabili CSS sfruttare il fallback mettendo come valore invalid alla variabile
