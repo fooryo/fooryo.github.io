@@ -162,10 +162,12 @@ function commuteChatPopOut(){
     if(!chatOuted){
         chatOuted=true;
         detatchChatFrame();
+        hideColumn();
     }else{
         chatOuted=false;
         reattachChatFrame();
         extChatWindowHandle.close();
+        showColumn();
     }
 }
 function receiveExitToParentWindow(test){
@@ -176,6 +178,18 @@ function receiveExitToParentWindow(test){
     else{console.log("what the fuck: receiveExitToParentWindow with value "+test+" and closed: "+extChatWindowHandle.closed);}
 }
 
+function hideColumn(){
+    document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
+    document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
+    columnHidden=true;
+}
+function showColumn(){
+    document.documentElement.style.setProperty("--widescreen-cols-config",
+    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
+    document.documentElement.style.setProperty("--widescreen-rows-config",
+        document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
+    columnHidden=false;
+}
 
 ///keycontrolJS--function
 function keyControlHandler(keydownEvent){
@@ -187,15 +201,18 @@ function keyControlHandler(keydownEvent){
     switch(keydownEvent.keyCode){
         case 72: //char Hh
             if(!columnHidden){
-                document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
-                document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
-                columnHidden=true;
+                //document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
+                //document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
+                //columnHidden=true;
+                hideColumn();
             }else{
-                document.documentElement.style.setProperty("--widescreen-cols-config",
-                    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
-                document.documentElement.style.setProperty("--widescreen-rows-config",
-                    document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
-                columnHidden=false;
+                //document.documentElement.style.setProperty("--widescreen-cols-config",
+                //    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
+                //document.documentElement.style.setProperty("--widescreen-rows-config",
+                //    document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
+                //columnHidden=false;
+                showColumn();
+
                 //TODO: mostrare fading popup che dice "per tornare premi H"
             }
             break;
