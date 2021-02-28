@@ -1,3 +1,107 @@
+const ruscellodata = {
+    "canali":[
+        {   //trailer.mp4
+            "nome":"TestTrailer",
+            "altstr":"TestTrailer",
+            "titlestr":"TestTrailer",
+            "iconpath":"/res/icons/balloon.png",
+            "srcurl":"trailer.mp4",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
+        {   //ruscello angelthump iframe
+            "nome":"RuscelloCinema_iframe",
+            "altstr":"RuscelloCinema_iframe",
+            "titlestr":"RuscelloCinema_iframe",
+            "iconpath":"/res/icons/white_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=ruscello",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
+        },
+        {   //ruscello angelthump rawhtml
+            "nome":"RuscelloCinema_rawhtml",
+            "altstr":"RuscelloCinema_rawhtml",
+            "titlestr":"RuscelloCinema_rawhtml",
+            "iconpath":"/res/icons/pirate_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=ruscello",
+            "rendermode":"rawhtml",
+            "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=ruscello\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
+        },
+        {   //WindowsMovieHouse AngelThump VIDEO
+            "nome":"AngelThump_video",
+            "altstr":"AngelThump_video",
+            "titlestr":"AngelThump_video",
+            "iconpath":"/res/icons/angel.png",
+            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
+        },
+        {   //WindowsMovieHouse AngelThump iframe
+            "nome":"AngelThump_iframe",
+            "altstr":"AngelThump_iframe",
+            "titlestr":"AngelThump_iframe",
+            "iconpath":"/res/icons/white_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
+        },
+        {   //WindowsMovieHouse AngelThump rawhtml
+            "nome":"AngelThump_rawhtml",
+            "altstr":"AngelThump_rawhtml",
+            "titlestr":"AngelThump_rawhtml",
+            "iconpath":"/res/icons/pirate_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+            "rendermode":"rawhtml",
+            "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
+        },
+        {   
+            "nome":"PicartoCanaleInbannabile",
+            "altstr":"Rai1",
+            "titlestr":"Rai1",
+            "iconpath":"/res/icons/telly.png",
+            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
+        {   
+            "nome":"TheVidyaNetwork",
+            "altstr":"TheVidyaNetwork",
+            "titlestr":"TheVidyaNetwork",
+            "iconpath":"/res/icons/pad.png",
+            "rendermode":"video",
+            "srcurl":"https://player.angelthump.com/?channel=thevidyanetwork",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
+        {   
+            "nome":"Vince",
+            "altstr":"Vince",
+            "titlestr":"Vince",
+            "iconpath":"/res/icons/help.png",
+            "srcurl":"https://vaughn.live/embed/video/micchan",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"        
+        },
+        {   
+            "nome":"Picarco Playloud Live video",
+            "altstr":"Picarco Playloud Live video",
+            "titlestr":"Picarco Playloud Live video",
+            "iconpath":"/res/icons/ufo_40.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
+            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/playloudlive.mp4?token=public&con=1614418313658",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
+        {   
+            "nome":"deepfulFrame",
+            "altstr":"deepfulFrame",
+            "titlestr":"deepfulFrame",
+            "iconpath":"/res/icons/ufo_40.png",
+            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/deepandsoulful.mp4?token=public&con=1606125864088",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        }
+    ]
+}
+
 ///detatchChatJS--global
 var extChatWindowHandle=null;
 var chatOuted=false;
