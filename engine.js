@@ -191,6 +191,16 @@ function showColumn(){
     columnHidden=false;
 }
 
+function commuteColumnHide(){
+    if(!columnHidden){
+        document.getElementById('showChatButton').style.display="block";
+        hideColumn();
+    }else{
+        showColumn();
+        document.getElementById('showChatButton').style.display="none";
+    }
+}
+
 ///keycontrolJS--function
 function keyControlHandler(keydownEvent){
     //keydownEvent.preventDefault(); //SE LASCIO QUESTO NON COMMENTATO MANCO LA CONSOLE CON F12 POSSO APRIRE, FARE ATTENZIONE
@@ -378,9 +388,12 @@ function addButtonToRemote(chid){
 
 
 ///detatchChatJS--init
-document.getElementById('dbgPOP').addEventListener("click",commuteChatPopOut);
+document.getElementById('ctrlPop').addEventListener("click",commuteChatPopOut);
 
-///keycontrolJS
+document.getElementById('ctrlHide').addEventListener("click",commuteColumnHide);
+document.getElementById('showChatButton').addEventListener("click",commuteColumnHide);
+
+///keycontrolJS--init
 document.addEventListener('keydown', keyControlHandler);
 try{
     document.getElementById('content').contentDocument.documentElement.getElementsByTagName('body').item(0).addEventListener('keydown', keyControlHandler);
@@ -389,9 +402,9 @@ try{
 }
 
 
-///resizeJS
+///resizeJS--init
 document.getElementById('verticalHandle').addEventListener('mousedown', startDraggingHandler);
 
-///remoteJS
+///remoteJS--init
 var ncanali = Object.keys(ruscellodata.canali).length;
 for(var i=0;i<ncanali;i++) addButtonToRemote(i);
