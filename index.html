@@ -35,7 +35,7 @@
 
         <div id="chatDiv">
             <script class="chatte" id="cid0020000154051602021" data-cfasync="false" async 
-            src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;" onload="console.log('finito onload tag');">
+            src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;" onload="document.getElementById('chatDiv').children[0].setAttribute('sandbox','');  ">
             {"handle":"chiacchiere","arch":"js","styles":
                 {"a":"000000","b":100,"c":"c0c0c0","d":"a0a0a0","e":"000000","g":"e0e0e0",
                 "h":"606060","j":"ffffff","k":"336666","l":"404040","m":"000000",
@@ -44,20 +44,7 @@
             }
             </script>
 
-            <!-- <script class="chatte" id="cid0020000265869400948" data-cfasync="false" async  -->
-            <!-- src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;"> -->
-            <!-- {"handle":"fooryoembed","arch":"js","styles": -->
-                <!-- {"a":"000000","b":100,"c":"c0c0c0","d":"a0a0a0","e":"000000","g":"e0e0e0", -->
-                <!-- "h":"606060","j":"ffffff","k":"336666","l":"404040","m":"000000", -->
-                <!-- "n":"FFFFFF","p":"10","q":"000000","r":100,"usricon":0,"allowpm":0,"cnrs":"0.38"}} -->
-            <!-- </script> -->
-
-
-            <!-- <script id="cid0020000154051602021_" data-cfasync="false" async="" src=" https://st.chatango.com/js/gz/emb.js " style="position: relative; width: 100%; height: 100%; padding-bottom 56.25%;"> -->
-            <!-- {"handle":"chiacchiere","arch":"js","styles": -->
-                <!-- {"a":"404040","b":100,"c":"FFFFFF","d":"FFFFFF","e":"202020","g":"c0c0c0","j":"808080","k":"808080","l":"404040", -->
-                <!-- "m":"404040","n":"FFFFFF","p":"10","q":"404040","r":100,"t":0,"usricon":0,"fwtickm":1}} -->
-            <!-- </script> -->
+            
 
 
         </div>
@@ -65,7 +52,7 @@
         <div id="verticalHandle"></div>
 
         <div id="controlsDiv">
-            v3.1-12-postChatScriptTest_
+            v3.1-13-sandbx-set-onload
             <a id="dbgADD" href="#">ADD</a>
             <a id="dbgDEL" href="#">DELETE</a>
             <a id="dbgCHAT" href="#">CHAT</a>
@@ -85,3 +72,18 @@
 
 
 </html>
+
+<!-- <script class="chatte" id="cid0020000265869400948" data-cfasync="false" async  -->
+            <!-- src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;"> -->
+            <!-- {"handle":"fooryoembed","arch":"js","styles": -->
+                <!-- {"a":"000000","b":100,"c":"c0c0c0","d":"a0a0a0","e":"000000","g":"e0e0e0", -->
+                <!-- "h":"606060","j":"ffffff","k":"336666","l":"404040","m":"000000", -->
+                <!-- "n":"FFFFFF","p":"10","q":"000000","r":100,"usricon":0,"allowpm":0,"cnrs":"0.38"}} -->
+            <!-- </script> -->
+
+
+            <!-- <script id="cid0020000154051602021_" data-cfasync="false" async="" src=" https://st.chatango.com/js/gz/emb.js " style="position: relative; width: 100%; height: 100%; padding-bottom 56.25%;"> -->
+            <!-- {"handle":"chiacchiere","arch":"js","styles": -->
+                <!-- {"a":"404040","b":100,"c":"FFFFFF","d":"FFFFFF","e":"202020","g":"c0c0c0","j":"808080","k":"808080","l":"404040", -->
+                <!-- "m":"404040","n":"FFFFFF","p":"10","q":"404040","r":100,"t":0,"usricon":0,"fwtickm":1}} -->
+            <!-- </script> -->
