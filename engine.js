@@ -258,7 +258,7 @@ try{
 
 
 ///resizeJS
-getHandleElement().addEventListener('mousedown', startDraggingHandler);
+document.getElementById('verticalHandle').addEventListener('mousedown', startDraggingHandler);
 
 ///remoteJS
 var ncanali = Object.keys(ruscellodata.canali).length;
