@@ -172,9 +172,6 @@ function createVideoIframeNode(chid){
     videoiframe.setAttribute("webkitallowfullscreen","");
     videoiframe.setAttribute("allowfullscreen","true");
     videoiframe.setAttribute("frameborder","no");
-
-    videoiframe.addEventListener('keydown', keyControlHandler);//TODO : test
-
     return videoiframe;
 }
 function createVideoNode(chid){ //per ora è fatto statico e in culo
@@ -190,8 +187,6 @@ function createVideoNode(chid){ //per ora è fatto statico e in culo
     sourceVideoNode.setAttribute("type", "video/mp4");
 
     newvideonode.appendChild(sourceVideoNode);
-    
-    newvideonode.addEventListener('keydown', keyControlHandler);//TODO : test
 
     return newvideonode;
 }
