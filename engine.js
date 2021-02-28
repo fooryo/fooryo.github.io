@@ -276,6 +276,12 @@ function createVideoIframeNode(chid){
     videoiframe.setAttribute("webkitallowfullscreen","");
     videoiframe.setAttribute("allowfullscreen","true");
     videoiframe.setAttribute("frameborder","no");
+    try{
+        videoiframe.addEventListener('keydown', keyControlHandler);//TODO : test : non funziona su angelthump che ha delle tipo protezioni
+    }catch(exception){
+        console.log("tryed to addEventListener on videoiframe in createVieoIframeNode");
+    }
+
     return videoiframe;
 }
 function createVideoNode(chid){ //per ora è fatto statico e in culo
@@ -291,6 +297,11 @@ function createVideoNode(chid){ //per ora è fatto statico e in culo
     sourceVideoNode.setAttribute("type", "video/mp4");
 
     newvideonode.appendChild(sourceVideoNode);
+    try{
+        newvideonode.addEventListener('keydown', keyControlHandler);//TODO : test : non funziona su angelthump che ha delle tipo protezioni
+    }catch(exception){
+        console.log("tryed to addEventListener so newvideonode in createVideoNode");
+    }
 
     return newvideonode;
 }
