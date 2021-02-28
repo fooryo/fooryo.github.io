@@ -18,7 +18,7 @@
     --widescreen-cols-config: auto var(--handler-width) var(--column-width);
     --widescreen-rows-config: 4vh auto 4vh;
 
-    --show-chat-button-z=2;
+    --show-chat-button-z: 2;
 
 }
 
@@ -54,7 +54,8 @@ iframe{
     right: 0px;
     height: 50px;
     width: auto;
-    background-color: grey;
+    background-color: black;
+    border-radius: 20% 0 20% 50%;
     opacity: 0;
 
     animation: buttonFadeOut 500ms;
@@ -69,13 +70,14 @@ iframe{
     animation-name: buttonFadeIn;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
+    cursor: pointer;
 }
 @keyframes buttonFadeIn{
     50%{opacity: 0.4;}
-    100%{opacity: 0.8;}
+    100%{opacity: 1;}
 }
 @keyframes buttonFadeOut{
-    from{opacity: 0.8;}
+    from{opacity: 1;}
     to {opacity: 0;}
 }
 
@@ -109,7 +111,7 @@ iframe{
 }
 
 #videoContainer{
-    background-color: darkgreen;
+    background-color: #141414;
     display: flex;
     grid-area: videoArea;
     height: 100vh;
@@ -153,17 +155,16 @@ video{
 */
 
 #controlsDiv{
-    background-color: chocolate;
+    background-color: #141414;
     grid-area: ctrlArena;
 }
 
 #remoteDiv{
-    background-color: rebeccapurple;
+    background-color: #141414;
     grid-area: remoteArea;
 
     /*EREDITATI DA RUSCELLAGIONE PROJ*/
 
-    background-color: rebeccapurple;
     padding: 3px;
     flex:5 0 40px;
     max-height: 40px;
@@ -181,7 +182,7 @@ video{
 }
 
 .controlImgButton{
-    background-color: yellow;
+    background-color: black;
     width: auto;
     max-height: 100%;
     border:3px outset rgb(61, 61, 61);
