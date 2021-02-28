@@ -146,7 +146,7 @@ function reattachChatFrame(){
 
     newElem.setAttribute("class","chatte");
     //newElem.setAttribute("id","cid0020000265869400948");//foortest
-    newElem.setAttribute("id","cid0020000154051602021_"); //chiacchiere
+    newElem.setAttribute("id","cid0020000154051602021"); //chiacchiere
     newElem.setAttribute("data-cfasynch","false");
     newElem.setAttribute("async","");
     newElem.setAttribute("src","//st.chatango.com/js/gz/emb.js");
