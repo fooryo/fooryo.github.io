@@ -18,6 +18,8 @@
     --widescreen-cols-config: auto var(--handler-width) var(--column-width);
     --widescreen-rows-config: 4vh auto 4vh;
 
+    --show-chat-button-z=2;
+
 }
 
 *{ /* '*' stands for qualsiasi elemento */
@@ -43,6 +45,40 @@ body{
 iframe{
     pointer-events: auto;
 }
+
+#showChatButton{
+    z-index: 2;  /*display default is block*/
+    display: none;
+    position:absolute;
+    top:0px;
+    right: 0px;
+    height: 50px;
+    width: auto;
+    background-color: grey;
+    opacity: 0;
+
+    animation: buttonFadeOut 500ms;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#showChatButton:hover{
+    animation-name: buttonFadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+@keyframes buttonFadeIn{
+    50%{opacity: 0.4;}
+    100%{opacity: 0.8;}
+}
+@keyframes buttonFadeOut{
+    from{opacity: 0.8;}
+    to {opacity: 0;}
+}
+
 
 
 #gridContainer{
@@ -138,10 +174,32 @@ video{
     align-items: center;
 }
 
-.splashscreen{
+.splashscreen{ /*monoscopio*/
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.controlImgButton{
+    background-color: yellow;
+    width: auto;
+    max-height: 100%;
+    border:3px outset rgb(61, 61, 61);
+    border-radius: 10%; 
+
+    
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.controlImgButton:hover{
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0), 0 17px 50px 0 rgba(255, 255, 255, 0.60);
+}
+.controlImgButton:active{
+    background-color: rgb(39, 39, 39);
+    border:3px inset rgb(61, 61, 61);
 }
 
 
@@ -159,11 +217,9 @@ video{
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
 .remoteImgButton:hover{
     box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0), 0 17px 50px 0 rgba(255, 255, 255, 0.60);
 }
-
 .remoteImgButton:active{
     background-color: rgb(39, 39, 39);
     border:3px inset rgb(61, 61, 61);
@@ -180,12 +236,9 @@ video{
     box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(210,105,30,0.50);
     */
 }
-
 .channelButton:hover{
-
 }
 .channelButton:active{ /*hold*/
-
 }
 
 .channelImgButton{
@@ -198,9 +251,11 @@ video{
     width:30px;
 }
 
+/*
 img{
     opacity: 1;
 }
+*/
 
 @media only screen and (max-aspect-ratio: 11/10){
     html{
@@ -209,6 +264,11 @@ img{
 
     body{
         height: 100%; /*fixes urlbar viewport probelm in chrome android*/
+    }
+
+    #showChatButton{
+        display: none;
+        z-index: -2;
     }
 
 
