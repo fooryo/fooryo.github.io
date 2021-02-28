@@ -267,7 +267,7 @@ img{
     }
 
 
-    #showChatButton #ctrlPop #ctrlHide{
+    #showChatButton, #ctrlPop, #ctrlHide{
         display:none;
         z-index: -2;
     }
