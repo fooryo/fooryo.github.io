@@ -108,6 +108,15 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },
+        {   
+            "nome":"La7",
+            "altstr":"La7",
+            "titlestr":"La7",
+            "iconpath":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/LA7_-_Logo_2011.svg/1200px-LA7_-_Logo_2011.svg.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
+            "srcurl":"http://92.246.85.109:8000/play/a00z",
+            "rendermode":"rawhtml",
+            "rawhtml":""
+        }
     ]
 }
 

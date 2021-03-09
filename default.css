@@ -283,7 +283,8 @@ img{
         /* display:grid; */
     
         grid-template-columns: 100vw;
-        grid-template-rows: 56.25vw 4vh auto 4vh;
+        /* grid-template-rows: 56.25vw 4vh auto 4vh; */
+        grid-template-rows: 56.25vw 1cm auto 1cm;
     
     
         grid-template-areas: 
