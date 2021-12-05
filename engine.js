@@ -55,11 +55,20 @@ const ruscellodata = {
         //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
         //},
         {   
-            "nome":"PicartoCanaleInbannabile",
+            "nome":"RIP_PICARTO",
             "altstr":"Rai1",
             "titlestr":"Rai1",
             "iconpath":"/res/icons/telly.png",
             "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
+            "rendermode":"video",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },
+        {   
+            "nome":"Picarto",
+            "altstr":"Rai1",
+            "titlestr":"Rai1",
+            "iconpath":"/res/icons/telly.png",
+            "srcurl":"blob:https://picarto.tv/80724423-ad78-4d52-b09a-e8f591ea54bd",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },
