@@ -55,9 +55,9 @@ const ruscellodata = {
         //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
         //},
         {   
-            "nome":"RIP_PICARTO",
-            "altstr":"Rai1",
-            "titlestr":"Rai1",
+            "nome":"PICARTO",
+            "altstr":"PICARTO",
+            "titlestr":"PICARTO",
             "iconpath":"/res/icons/telly.png",
             "srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2byoucantbanme2.mp4",
             //"srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
