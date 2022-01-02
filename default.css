@@ -136,10 +136,22 @@ video{
     background-color: goldenrod;
     grid-area: verticalHandle;
     height: 100vh;
-    border-left:var(--handler-width) dashed rgb(0, 81, 128)!important;
+    border-left:var(--handler-width) !important; /* dashed rgb(0, 81, 128)     che è sto important e perchè è qui?*/
 }
 #verticalHandle:hover{
     cursor: ew-resize;
+    animation-name:showVerticalHandleOnHover;
+    animation-duration: 1s;
+}
+
+@keyframe showVerticalHandleOnHover{
+    from {
+        background-color: goldenrod;
+    }
+    to {
+        background-color: goldenrod;
+        color: dashed rgb(0, 81, 128);
+    }
 }
 
 #chatDiv{
