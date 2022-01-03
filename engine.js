@@ -1,3 +1,12 @@
+/*
+    possibili rendermode:
+        video : imposta srcurl come src in un elemento <video>
+        iframe : imposta src url come ???______???
+        raw : inserisce codice html dalla variabile rawhtml nell'elemento del video (? non sono sicuro, rivedere il codice javascript)
+
+        forse che rawhtml doveva essere anche un elemento di fallback in caso di problemi [forse neanche implementato]
+*/
+
 const ruscellodata = {
     "canali":[
         //{   //trailer.mp4
@@ -13,11 +22,11 @@ const ruscellodata = {
             "nome":"RuscelloCinema_iframe",
             "altstr":"RuscelloCinema_iframe",
             "titlestr":"RuscelloCinema_iframe",
-            "iconpath":"/res/icons/white_isaac.png",
+            "iconpath":"/res/icons/3479-200.png",
             "srcurl":"https://player.angelthump.com/?channel=ruscello",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
-        },
+        }
         //{   //ruscello angelthump rawhtml
         //    "nome":"RuscelloCinema_rawhtml",
         //    "altstr":"RuscelloCinema_rawhtml",
@@ -36,15 +45,7 @@ const ruscellodata = {
         //    "rendermode":"video",
         //    "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         //},
-        {   //WindowsMovieHouse AngelThump iframe
-            "nome":"AngelThump_iframe",
-            "altstr":"AngelThump_iframe",
-            "titlestr":"AngelThump_iframe",
-            "iconpath":"/res/icons/white_isaac.png",
-            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
-            "rendermode":"iframe",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
-        },
+        
         //{   //WindowsMovieHouse AngelThump rawhtml
         //    "nome":"AngelThump_rawhtml",
         //    "altstr":"AngelThump_rawhtml",
@@ -54,7 +55,7 @@ const ruscellodata = {
         //    "rendermode":"rawhtml",
         //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
         //},
-        {   
+        ,{   
             "nome":"PICARTO",
             "altstr":"PICARTO",
             "titlestr":"PICARTO",
@@ -63,8 +64,10 @@ const ruscellodata = {
             //"srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }
+        
+        /*
+        ,{  //ESPERIMENTO QUANDO PICARTO SI SPOSTÒ SU HLS, FALLITO
             "nome":"Picarto",
             "altstr":"Rai1",
             "titlestr":"Rai1",
@@ -72,8 +75,10 @@ const ruscellodata = {
             "srcurl":"blob:https://picarto.tv/80724423-ad78-4d52-b09a-e8f591ea54bd",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }
+        */
+        
+        ,{   
             "nome":"TheVidyaNetwork",
             "altstr":"TheVidyaNetwork",
             "titlestr":"TheVidyaNetwork",
@@ -81,8 +86,10 @@ const ruscellodata = {
             "rendermode":"video",
             "srcurl":"https://player.angelthump.com/?channel=thevidyanetwork",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }
+        
+        /*
+        ,{   //PREVIOUS STREAMING PLATFORM
             "nome":"Vince",
             "altstr":"Vince",
             "titlestr":"Vince",
@@ -90,8 +97,11 @@ const ruscellodata = {
             "srcurl":"https://vaughn.live/embed/video/micchan",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"        
-        },
-        {   
+        }
+        */
+        
+        /*
+        ,{   //MUSICA LIVE DA PICARDO
             "nome":"Picarco Playloud Live video",
             "altstr":"Picarco Playloud Live video",
             "titlestr":"Picarco Playloud Live video",
@@ -99,8 +109,11 @@ const ruscellodata = {
             "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/playloudlive.mp4?token=public&con=1614418313658",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }
+        */
+        
+        /*
+        ,{    //MUSICA LIVE DA PICARDO
             "nome":"deepfulFrame",
             "altstr":"deepfulFrame",
             "titlestr":"deepfulFrame",
@@ -108,8 +121,11 @@ const ruscellodata = {
             "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/deepandsoulful.mp4?token=public&con=1606125864088",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }
+        */
+        
+        /*,
+        {    //ESPERIMENTO DI EMBED RAI1, FALLITO
             "nome":"Rai1",
             "altstr":"Rai1",
             "titlestr":"Rai1",
@@ -117,8 +133,8 @@ const ruscellodata = {
             "srcurl":"https://www.raiplay.it/dirette/",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        },
-        {   
+        }*/
+        ,{   
             "nome":"La7",
             "altstr":"La7",
             "titlestr":"La7",
@@ -126,6 +142,15 @@ const ruscellodata = {
             "srcurl":"http://92.246.85.109:8000/play/a00z",
             "rendermode":"rawhtml",
             "rawhtml":""
+        }
+        ,{   //WindowsMovieHouse AngelThump iframe
+            "nome":"AngelThump_iframe",
+            "altstr":"AngelThump_iframe",
+            "titlestr":"AngelThump_iframe",
+            "iconpath":"/res/icons/white_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         }
     ]
 }
