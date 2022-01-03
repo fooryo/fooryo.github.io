@@ -22,7 +22,7 @@ const ruscellodata = {
             "nome":"RuscelloCinema_iframe",
             "altstr":"RuscelloCinema_iframe",
             "titlestr":"RuscelloCinema_iframe",
-            "iconpath":"/res/icons/3479-200.png",
+            "iconpath":"/res/icons/film.png",
             "srcurl":"https://player.angelthump.com/?channel=ruscello",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
