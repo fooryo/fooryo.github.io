@@ -60,7 +60,8 @@ const ruscellodata = {
             "altstr":"PICARTO",
             "titlestr":"PICARTO",
             "iconpath":"/res/icons/telly.png",
-            "srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2byoucantbanme2.mp4",
+            "srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2bruscellus.mp4"
+            //"srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2byoucantbanme2.mp4",
             //"srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
