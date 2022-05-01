@@ -10,7 +10,8 @@
             vaughn.live
 
         NOTES
-            hls video ha bisogno di un player apposito tipo video.js
+            hls video ha bisogno di un player apposito tipo video.js o hls.js
+            https://github.com/video-dev/hls.js/
             //TODO: mostrare fading popup che dice "per tornare premi H", penso quando si fa collassare la chat
 */
 
@@ -43,15 +44,6 @@ const ruscellodata = {
             //"srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2byoucantbanme2.mp4",
             //"srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
             "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        ,{   
-            "nome":"TheVidyaNetwork",
-            "altstr":"TheVidyaNetwork",
-            "titlestr":"TheVidyaNetwork",
-            "iconpath":"/res/icons/pad.png",
-            "rendermode":"video",
-            "srcurl":"https://player.angelthump.com/?channel=thevidyanetwork",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         }
         ,{   //WindowsMovieHouse AngelThump iframe
