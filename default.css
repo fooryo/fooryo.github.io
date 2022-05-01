@@ -141,7 +141,7 @@ video{
 }
 #verticalHandle:hover{
     cursor: ew-resize;
-    border-left:var(--handler-width) dashed rgb(0, 81, 128) !important;
+    border-left:var(--handler-width) dashed goldenrod !important;
 }
 
 #chatDiv{
