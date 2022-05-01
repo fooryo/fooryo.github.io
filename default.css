@@ -152,6 +152,9 @@ video{
 
 
 #controlsDiv{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
     background-color: #141414;
     grid-area: ctrlArena;
 }
