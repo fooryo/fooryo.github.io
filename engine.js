@@ -5,6 +5,13 @@
         raw : inserisce codice html dalla variabile rawhtml nell'elemento del video (? non sono sicuro, rivedere il codice javascript)
 
         forse che rawhtml doveva essere anche un elemento di fallback in caso di problemi [forse neanche implementato]
+
+        defuct streaming services:
+            vaughn.live
+
+        NOTES
+            hls video ha bisogno di un player apposito tipo video.js
+            //TODO: mostrare fading popup che dice "per tornare premi H", penso quando si fa collassare la chat
 */
 
 const ruscellodata = {
@@ -27,34 +34,6 @@ const ruscellodata = {
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         }
-        //{   //ruscello angelthump rawhtml
-        //    "nome":"RuscelloCinema_rawhtml",
-        //    "altstr":"RuscelloCinema_rawhtml",
-        //    "titlestr":"RuscelloCinema_rawhtml",
-        //    "iconpath":"/res/icons/pirate_isaac.png",
-        //    "srcurl":"https://player.angelthump.com/?channel=ruscello",
-        //    "rendermode":"rawhtml",
-        //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=ruscello\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
-        //},
-        //{   //WindowsMovieHouse AngelThump VIDEO
-        //    "nome":"AngelThump_video",
-        //    "altstr":"AngelThump_video",
-        //    "titlestr":"AngelThump_video",
-        //    "iconpath":"/res/icons/angel.png",
-        //    "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
-        //    "rendermode":"video",
-        //    "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
-        //},
-        
-        //{   //WindowsMovieHouse AngelThump rawhtml
-        //    "nome":"AngelThump_rawhtml",
-        //    "altstr":"AngelThump_rawhtml",
-        //    "titlestr":"AngelThump_rawhtml",
-        //    "iconpath":"/res/icons/pirate_isaac.png",
-        //    "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
-        //    "rendermode":"rawhtml",
-        //    "rawhtml":"<iframe style=\"position: absolute; top: 0; left: 0; height: 100% ; width: 100%;\" src=\"https://player.angelthump.com/?channel=windowsmoviehouse\" webkitallowfullscreen=\"\" allowfullscreen=\"\" frameborder=\"no\"></iframe>"
-        //},
         ,{   
             "nome":"PICARTO",
             "altstr":"PICARTO",
@@ -66,19 +45,6 @@ const ruscellodata = {
             "rendermode":"video",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         }
-        
-        /*
-        ,{  //ESPERIMENTO QUANDO PICARTO SI SPOSTÒ SU HLS, FALLITO
-            "nome":"Picarto",
-            "altstr":"Rai1",
-            "titlestr":"Rai1",
-            "iconpath":"/res/icons/telly.png",
-            "srcurl":"blob:https://picarto.tv/80724423-ad78-4d52-b09a-e8f591ea54bd",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        */
-        
         ,{   
             "nome":"TheVidyaNetwork",
             "altstr":"TheVidyaNetwork",
@@ -87,62 +53,6 @@ const ruscellodata = {
             "rendermode":"video",
             "srcurl":"https://player.angelthump.com/?channel=thevidyanetwork",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        
-        /*
-        ,{   //PREVIOUS STREAMING PLATFORM
-            "nome":"Vince",
-            "altstr":"Vince",
-            "titlestr":"Vince",
-            "iconpath":"/res/icons/help.png",
-            "srcurl":"https://vaughn.live/embed/video/micchan",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"        
-        }
-        */
-        
-        /*
-        ,{   //MUSICA LIVE DA PICARDO
-            "nome":"Picarco Playloud Live video",
-            "altstr":"Picarco Playloud Live video",
-            "titlestr":"Picarco Playloud Live video",
-            "iconpath":"/res/icons/ufo_40.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
-            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/playloudlive.mp4?token=public&con=1614418313658",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        */
-        
-        /*
-        ,{    //MUSICA LIVE DA PICARDO
-            "nome":"deepfulFrame",
-            "altstr":"deepfulFrame",
-            "titlestr":"deepfulFrame",
-            "iconpath":"/res/icons/ufo_40.png",
-            "srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/deepandsoulful.mp4?token=public&con=1606125864088",
-            "rendermode":"iframe",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        */
-        
-        /*,
-        {    //ESPERIMENTO DI EMBED RAI1, FALLITO
-            "nome":"Rai1",
-            "altstr":"Rai1",
-            "titlestr":"Rai1",
-            "iconpath":"/res/icons/rai1.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
-            "srcurl":"https://www.raiplay.it/dirette/",
-            "rendermode":"iframe",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }*/
-        ,{   
-            "nome":"La7",
-            "altstr":"La7",
-            "titlestr":"La7",
-            "iconpath":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/LA7_-_Logo_2011.svg/1200px-LA7_-_Logo_2011.svg.png",//https://1-edge1-eu-west.picarto.tv/mp4/Chillhop.mp4?token=public&con=1614418213881
-            "srcurl":"http://92.246.85.109:8000/play/a00z",
-            "rendermode":"rawhtml",
-            "rawhtml":""
         }
         ,{   //WindowsMovieHouse AngelThump iframe
             "nome":"AngelThump_iframe",
@@ -264,22 +174,7 @@ function keyControlHandler(keydownEvent){
 
     switch(keydownEvent.keyCode){
         case 72: //char Hh
-        commuteColumnHide();
-            //if(!columnHidden){
-            //    //document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
-            //    //document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
-            //    //columnHidden=true;
-            //    hideColumn();
-            //}else{
-            //    //document.documentElement.style.setProperty("--widescreen-cols-config",
-            //    //    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
-            //    //document.documentElement.style.setProperty("--widescreen-rows-config",
-            //    //    document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
-            //    //columnHidden=false;
-            //    showColumn();
-//
-            //    //TODO: mostrare fading popup che dice "per tornare premi H"
-            //}
+            commuteColumnHide();
             break;
         case 82: //char rR
             //potrei usare le variabili CSS sfruttare il fallback mettendo come valore invalid alla variabile
@@ -355,17 +250,6 @@ function createVideoIframeNode(chid){
     let videoiframe = document.createElement('iframe');
     videoiframe.setAttribute("id","content");
     videoiframe.setAttribute("src",ruscellodata.canali[chid].srcurl);
-    //videoiframe.setAttribute("webkitallowfullscreen","");
-    //videoiframe.setAttribute("allowfullscreen","true");
-    //videoiframe.setAttribute("frameborder","no");
-    //videoiframe.frameBorder="no";
-    //videoiframe.referrerPolicy="origin";
-    //videoiframe.sandbox="allow-forms allow-modals allow-orientation-lock allow-scripts allow-top-navigation";
-    try{
-        //videoiframe.addEventListener('keydown', keyControlHandler);//TODO : test : non funziona su angelthump che ha delle tipo protezioni
-    }catch(exception){
-        console.log("tryed to addEventListener on videoiframe in createVieoIframeNode");
-    }
 
     return videoiframe;
 }
