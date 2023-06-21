@@ -196,6 +196,7 @@ function getCSSRule(ruleName) {
     return result;
 };
 
+
 function startDraggingHandler(mousedownE){
     mousedownE.preventDefault();
     if(!inDragging){
@@ -246,6 +247,7 @@ function createVideoIframeNode(chid){
 
     return videoiframe;
 }
+
 function createVideoNode(chid){ //per ora è fatto statico e in culo
     let newvideonode = document.createElement('video');
     newvideonode.setAttribute("id","content");
@@ -267,6 +269,8 @@ function createVideoNode(chid){ //per ora è fatto statico e in culo
 
     return newvideonode;
 }
+
+
 function paintVideoFrame(chid,event){
     console.log("Called: paintVideoFrame with argument chid:"+chid);
     let contenitoreElement = document.getElementById('videoContainer');
@@ -297,6 +301,8 @@ function paintVideoFrame(chid,event){
             console.log("ERROR : chid:"+chid+"\n"+ruscellodata.canali[chid]+"\n rendermode: "+ruscellodata.canali[chid].rendermode);
     }
 }
+
+
 function addButtonToRemote(chid){
     let buttonElement = document.createElement("img");
 
@@ -412,7 +418,7 @@ var dpidiv = document.createElement('div')
 dpidiv.innerHTML="dpi:"+Math.trunc(dpif.dpi()*100)/100
 dpidiv.innerHTML+="  ::  dppx:"+Math.trunc(dpif.dppx()*100)/100
 dpidiv.innerHTML+="  ::  dpcm:"+Math.trunc(dpif.dpcm()*100)/100
-dpidiv.setAttribute("style","color:white")
+dpidiv.setAttribute("style","color:white;font-size:70%")
 document.getElementById('controlsDiv').prepend(dpidiv);
 console.log(dpif.dpi())
 console.log(dpif.dppx())

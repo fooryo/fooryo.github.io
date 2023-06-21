@@ -48,6 +48,7 @@ iframe{
     width: 100%;
 }
 
+/*Questo showChatButton è quello in sovraimpressione nello stream quando ci si passa il mouse sopra*/
 #showChatButton{
     z-index: 2;  /*display default is block*/
     display: none;
@@ -119,9 +120,8 @@ iframe{
     height: 100vh;
     
 }
-#videoContainer>iframe{
 
-}
+#videoContainer>iframe{}
 
 video{
     width: 100%;
@@ -131,6 +131,16 @@ video{
     /* width: 1px; */
     flex:1 1 auto;
 }
+
+
+.splashscreen{ /*monoscopio*/
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
 
 #verticalHandle{
     background-color: rgb(37, 37, 37);
@@ -151,33 +161,14 @@ video{
 }
 
 
+
+
 #controlsDiv{
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap-reverse;
     background-color: #141414;
     grid-area: ctrlArena;
-}
-
-#remoteDiv{
-    background-color: #141414;
-    grid-area: remoteArea;
-
-
-    padding: 3px;
-    flex:5 0 40px;
-    max-height: 40px;
-
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.splashscreen{ /*monoscopio*/
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 }
 
 .controlImgButton{
@@ -203,6 +194,26 @@ video{
 }
 
 
+
+
+
+
+#remoteDiv{
+    background-color: #141414;
+    grid-area: remoteArea;
+
+
+    padding: 3px;
+    flex:5 0 40px;
+    max-height: 40px;
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
 .remoteImgButton{
     background-color: black;
     width: auto;
@@ -210,7 +221,6 @@ video{
     border:3px outset rgb(61, 61, 61);
     border-radius: 10%; 
 
-    
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -226,16 +236,13 @@ video{
 }
 
 
+
 .channelButton{
     min-width: 0; /*fa stare le icone dentro*/
     background-color: rgb(73, 73, 73);
-
 }
-.channelButton:hover{
-}
-.channelButton:active{ /*hold*/
-}
-
+.channelButton:hover{}
+.channelButton:active{ /*hold*/}
 .channelImgButton{
     min-width: 15px;
     min-height: 15px;
@@ -245,6 +252,10 @@ video{
     height:30px ;
     width:30px;
 }
+
+
+
+
 
 
 @media only screen and (max-aspect-ratio: 11/10){
