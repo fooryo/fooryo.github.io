@@ -15,6 +15,9 @@
             //TODO: mostrare fading popup che dice "per tornare premi H", penso quando si fa collassare la chat
 */
 
+var dpif = getDpiFunctions();
+var dpi = dpif.dpi();
+
 const ruscellodata = {
     "canali":[
         //{   //trailer.mp4
@@ -135,16 +138,20 @@ function receiveExitToParentWindow(test){
     else{console.log("what the fuck: receiveExitToParentWindow with value "+test+" and closed: "+extChatWindowHandle.closed);}
 }
 
+var default_widescreen_row_config = dpi && dpi<200 ? "4vh auto 4vh" : "4vh auto 0vh" 
+
 function hideColumn(){
     document.documentElement.style.setProperty("--widescreen-cols-config","100vw");
     document.documentElement.style.setProperty("--widescreen-rows-config","100vh");
     columnHidden=true;
 }
 function showColumn(){
-    document.documentElement.style.setProperty("--widescreen-cols-config",
-    document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
+    document.documentElement.style.setProperty("--widescreen-cols-config", document.documentElement.style.getPropertyValue("--default-widescreen-cols-config"));
     document.documentElement.style.setProperty("--widescreen-rows-config",
-        document.documentElement.style.getPropertyValue("--default-widescreen-rows-config"));
+        //document.documentElement.style.getPropertyValue("--default-widescreen-rows-config") //precedentemente andavo a rpednere il valore di default da riprestinare da una variabile css readonly
+        //ma questo non va più bene perchè il default value adesso dipende se portrait/landscape in monitor/smartphone quindi come bypass ho messo il default value in una variavile var di javascript
+        default_widescreen_row_config
+        );
     columnHidden=false;
 }
 
@@ -154,7 +161,7 @@ function commuteColumnHide(){
         hideColumn();
     }else{
         showColumn();
-        document.getElementById('showChatButton').style.display="none";
+        dpi && dpi<200 ? document.getElementById('showChatButton').style.display="none" : null;
     }
 }
 
@@ -380,16 +387,27 @@ function getDpiFunctions() {   //c
 }
 
 
-var dpif = getDpiFunctions();
-var dpi = dpif.dpi();
+
+function triggAnimationByFlipClass(){
+    let e = document.getElementById('showChatButton');
+    e.classList.remove("showChatButtonClass")
+    e.classList.add("showChatButtonClass")
+}
 
 
+if(dpi && dpi>200 ){
+    document.getElementById('showChatButton').style.display="block";
+    //document.getElementById('showChatButton').style.height="130px";
+
+    document.getElementById('showChatButton').addEventListener("touchstart", triggAnimationByFlipClass, true);
+}
 
 
 
 
 ///detatchChatJS--init
 dpi && dpi<200 ? document.getElementById('ctrlPop').addEventListener("click",commuteChatPopOut) : !1 ;
+dpi && dpi>200 ? document.getElementById('ctrlPop').style.display="none" : !1 ;
 
 document.getElementById('ctrlHide').addEventListener("click",commuteColumnHide);
 document.getElementById('showChatButton').addEventListener("click",commuteColumnHide);
@@ -407,7 +425,8 @@ try{
 dpi && dpi<200 ? document.getElementById('verticalHandle').addEventListener('mousedown', startDraggingHandler) : !1 ;
 
 
-dpi && dpi<200 ? null :null ; //TODO quando in mobile e riconoscere landscape nascondere la barra dei canali
+dpi && dpi> 200 ? document.documentElement.style.setProperty('--widescreen-rows-config','4vh auto 0vh')
+:null ; //TODO quando in mobile e riconoscere landscape nascondere la barra dei canali
 
 ///remoteJS--init
 var ncanali = Object.keys(ruscellodata.canali).length;

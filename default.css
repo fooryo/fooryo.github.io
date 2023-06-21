@@ -51,7 +51,7 @@ iframe{
 }
 
 /*Questo showChatButton è quello in sovraimpressione nello stream quando ci si passa il mouse sopra*/
-#showChatButton{
+.showChatButtonClass{
     z-index: 2;  /*display default is block*/
     display: none;
     position:absolute;
@@ -71,7 +71,7 @@ iframe{
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-#showChatButton:hover{
+.showChatButtonClass:hover{
     animation-name: buttonFadeIn;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
