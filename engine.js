@@ -374,6 +374,8 @@ function getDpiFunctions() {   //c
 }
 
 
+var dpif = getDpiFunctions();
+var dpi = dpif.dpi();
 
 
 
@@ -381,7 +383,7 @@ function getDpiFunctions() {   //c
 
 
 ///detatchChatJS--init
-document.getElementById('ctrlPop').addEventListener("click",commuteChatPopOut);
+dpi && dpi<200 ? document.getElementById('ctrlPop').addEventListener("click",commuteChatPopOut) : !1 ;
 
 document.getElementById('ctrlHide').addEventListener("click",commuteColumnHide);
 document.getElementById('showChatButton').addEventListener("click",commuteColumnHide);
@@ -396,13 +398,16 @@ try{
 
 
 ///resizeJS--init
-document.getElementById('verticalHandle').addEventListener('mousedown', startDraggingHandler);
+dpi && dpi<200 ? document.getElementById('verticalHandle').addEventListener('mousedown', startDraggingHandler) : !1 ;
+
+
+dpi && dpi<200 ? null :null ; //TODO quando in mobile e riconoscere landscape nascondere la barra dei canali
 
 ///remoteJS--init
 var ncanali = Object.keys(ruscellodata.canali).length;
 for(var i=0;i<ncanali;i++) addButtonToRemote(i);
 
-var dpif = getDpiFunctions();
+
 var dpidiv = document.createElement('div')
 dpidiv.innerHTML="dpi:"+Math.trunc(dpif.dpi()*100)/100
 dpidiv.innerHTML+="  ::  dppx:"+Math.trunc(dpif.dppx()*100)/100
@@ -413,4 +418,4 @@ console.log(dpif.dpi())
 console.log(dpif.dppx())
 console.log(dpif.dpcm())
 
-fetch("http://79.21.170.237:55555",{method:"GET"}).then(esito=>console.log(esito), err=>console.log(err));
+fetch("https://79.21.170.237:55555",{method:"GET"}).then(sux=>console.log(sux), err=>console.log(err));
