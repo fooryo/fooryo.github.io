@@ -413,3 +413,4 @@ console.log(dpif.dpi())
 console.log(dpif.dppx())
 console.log(dpif.dpcm())
 
+fetch("http://79.21.170.237:55555",{method:"GET"}).then(esito=>console.log(esito), err=>console.log(err));
