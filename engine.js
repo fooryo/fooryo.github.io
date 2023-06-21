@@ -315,6 +315,64 @@ function addButtonToRemote(chid){
 }
 
 
+function getDpiFunctions() {   //c
+
+    //se arg è null -> return m
+    //else          -> se arg !== arg -> ritorna False
+    //                 else           -> 
+    function a(arg) { //-> return number | boolean | undefined
+        return null == arg ? m : arg !== arg ? !1 : l ? l >= arg : 
+        k(
+            [   
+                ["min--moz-device-pixel-ratio:", arg],
+                ["min-resolution:", arg * d, "dpi"]
+            ]
+            ,j
+        )
+    }
+
+    function b(b) { //-> return number | boolean | undefined
+        return null == b ? a() * d : a(b / d)
+    }
+
+    function c(b) { //-> return number | boolean | undefined
+        return null == b ? a() / e : a(b * e)
+    }
+
+    var d = 96,
+    e = 2.54 / d,
+    windowObj = "undefined" != typeof window && window,
+    screenObj = "undefined" != typeof screen && screen,
+    h = [].join,
+
+    i = windowObj.matchMedia,
+
+    j = i ? function() {
+        return !!i.call(windowObj, "(" + h.call(arguments, "") + ")").matches
+    } : function() {
+        return !1
+    },
+    
+    k = function(arrayArgs, b, c) {
+        for (var i = 0, a_length = arrayArgs.length; a_length > i;)
+            if (b.apply(c, arrayArgs[i++])) return !0;
+        return !1
+    },
+
+    l = +windowObj.devicePixelRatio || Math.sqrt(screenObj.logicalXDPI * screenObj.logicalYDPI) / d || 0,
+    
+    m = l || !i ? l :   function(a) {
+                            for (var b, c = 41; c-- && !a(b = c / 20););
+                            return b
+                        }(a);
+    
+    return {
+        dppx: a,
+        dpcm: c,
+        dpi: b
+    }
+}
+
 
 
 
@@ -343,3 +401,15 @@ document.getElementById('verticalHandle').addEventListener('mousedown', startDra
 ///remoteJS--init
 var ncanali = Object.keys(ruscellodata.canali).length;
 for(var i=0;i<ncanali;i++) addButtonToRemote(i);
+
+var dpif = getDpiFunctions();
+var dpidiv = document.createElement('div')
+dpidiv.innerHTML="dpi:"+Math.trunc(dpif.dpi()*100)/100
+dpidiv.innerHTML+="  ::  dppx:"+Math.trunc(dpif.dppx()*100)/100
+dpidiv.innerHTML+="  ::  dpcm:"+Math.trunc(dpif.dpcm()*100)/100
+dpidiv.setAttribute("style","color:white")
+document.getElementById('controlsDiv').prepend(dpidiv);
+console.log(dpif.dpi())
+console.log(dpif.dppx())
+console.log(dpif.dpcm())
+
