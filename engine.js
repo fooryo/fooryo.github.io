@@ -8,6 +8,7 @@
 
         defuct streaming services:
             vaughn.live
+            picarto.tv (doenst allow cinema)
 
         NOTES
             hls video ha bisogno di un player apposito tipo video.js o hls.js
@@ -37,26 +38,15 @@ const ruscellodata = {
             "srcurl":"https://player.angelthump.com/?channel=ruscello",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
-        }
-        ,{   
-            "nome":"PICARTO",
-            "altstr":"PICARTO",
-            "titlestr":"PICARTO",
-            "iconpath":"/res/icons/telly.png",
-            "srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2bruscellus.mp4",
-            //"srcurl":"https://edge1-eu-west.picarto.tv/stream/golive%2byoucantbanme2.mp4",
-            //"srcurl":"https://1-edge1-eu-west.picarto.tv/mp4/canaleinbannabile.mp4?token=public&con=1574712198055",
-            "rendermode":"video",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
-        }
-        ,{   //WindowsMovieHouse AngelThump iframe
-            "nome":"AngelThump_iframe",
-            "altstr":"AngelThump_iframe",
-            "titlestr":"AngelThump_iframe",
-            "iconpath":"/res/icons/white_isaac.png",
-            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+        },
+        {
+            "nome":"mediamtx_nome",
+            "altstr":"mediamtx_altstr",
+            "titlestr":"mediamtx_titlestr",
+            "iconpath":"/res/icons/help.png",
+            "srcurl":"https://hls.fooryo.top/mystream",
             "rendermode":"iframe",
-            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         }
     ]
 }
