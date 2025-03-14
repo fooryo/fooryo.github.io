@@ -47,6 +47,14 @@ const ruscellodata = {
             "srcurl":"https://hls.fooryo.top/mystream",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
+        },{   //WindowsMovieHouse AngelThump iframe
+            "nome":"AngelThump_iframe",
+            "altstr":"AngelThump_iframe",
+            "titlestr":"AngelThump_iframe",
+            "iconpath":"/res/icons/white_isaac.png",
+            "srcurl":"https://player.angelthump.com/?channel=windowsmoviehouse",
+            "rendermode":"iframe",
+            "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chid is _EMPTY_"
         }
     ]
 }
