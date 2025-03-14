@@ -435,5 +435,3 @@ console.log(dpif.dpcm())
 
 paintVideoFrame(0,()=>{})
 
-//WTF is this shit?
-//fetch("https://79.21.170.237:55555",{method:"GET"}).then(sux=>console.log(sux), err=>console.log(err));
