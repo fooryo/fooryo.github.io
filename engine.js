@@ -44,7 +44,7 @@ const ruscellodata = {
             "altstr":"mediamtx_altstr",
             "titlestr":"mediamtx_titlestr",
             "iconpath":"/res/icons/help.png",
-            "srcurl":"https://hls.fooryo.top/mystream",
+            "srcurl":"https://hls.xi.fooryo.top/ruscello",
             "rendermode":"iframe",
             "rawhtml":" RAW-HTML FIELD in ruscellodata.canali FOR THIS chi is _EMPTY_"
         },{   //WindowsMovieHouse AngelThump iframe
